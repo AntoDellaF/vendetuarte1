@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Crear Escultura</title>
-</head>
-<body>
-    <h1>Crear Escultura</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Guardar</button>
-    </form>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+    Esculturas
+{% endblock %}
+
+{% block content %}
+    <h1>Publica tu esculturas</h1>
+    <p>Cuenta acerca de tu pieza para que todos puedan verla.</p>
+{% endblock %}

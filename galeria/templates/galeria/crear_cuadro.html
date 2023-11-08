@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Crear Cuadro</title>
+    <title>{% block title %}Cuadros{% endblock %}</title>
 </head>
 <body>
-    <h1>Crear Cuadro</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Guardar</button>
-    </form>
+    <header>
+        <!-- Publique su cuadro -->
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- El contenido específico de cada página irá aquí -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Aquí puedes poner tu código de pie de página -->
+    </footer>
 </body>
 </html>

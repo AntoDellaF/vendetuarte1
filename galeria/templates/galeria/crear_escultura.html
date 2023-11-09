@@ -1,10 +1,14 @@
-{% extends "base.html" %}
+{% extends 'galeria/base.html' %}
 
-{% block title %}
-    Esculturas
-{% endblock %}
+{% block title %}Vende Tu Pieza{% endblock %}
+
+{% block header %}Galería de Arte - Sube tu Escultura{% endblock %}
 
 {% block content %}
-    <h1>Publica tu esculturas</h1>
-    <p>Cuenta acerca de tu pieza para que todos puedan verla.</p>
+    <h2>Formulario para Escultura</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
 {% endblock %}

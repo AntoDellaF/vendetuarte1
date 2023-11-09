@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Vende Tu Arte{% endblock %}</title>
+</head>
+<body>
+    <div id="header">
+        <h1>{% block header %}Galería de Arte{% endblock %}</h1>
+        <ul>
+            <li><a href="{% url 'crear_escultura' %}">Escultura</a></li>
+            <li><a href="{% url 'crear_ceramica' %}">Cerámica</a></li>
+            <li><a href="{% url 'crear_cuadro' %}">Cuadros</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

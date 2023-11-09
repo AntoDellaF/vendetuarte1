@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Cuadros{% endblock %}</title>
-</head>
-<body>
-    <header>
-        <!-- Publique su cuadro -->
-    </header>
+{% extends 'galeria/base.html' %}
 
-    <main>
-        {% block content %}
-        <!-- El contenido específico de cada página irá aquí -->
-        {% endblock %}
-    </main>
+{% block title %}Vende Tu Pieza{% endblock %}
 
-    <footer>
-        <!-- Aquí puedes poner tu código de pie de página -->
-    </footer>
-</body>
-</html>
+{% block header %}Galería de Arte - Sube tu Cuadro{% endblock %}
+
+{% block content %}
+    <h2>Formulario para Cuadro</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+{% endblock %}

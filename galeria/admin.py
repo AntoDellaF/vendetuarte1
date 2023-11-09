@@ -1,3 +1,7 @@
 from django.contrib import admin
+from galeria.models import Cuadro, Escultura, Ceramica
 
-# Register your models here.
+admin.site.register(Cuadro)
+admin.site.register(Escultura)
+admin.site.register(Ceramica)
+

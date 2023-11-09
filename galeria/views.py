@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import CuadroForm, EsculturaForm, CeramicaForm
+from galeria.forms import CuadroForm, EsculturaForm, CeramicaForm
 
 def crear_cuadro(request):
     if request.method == 'POST':

@@ -17,7 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-urlpatterns = [
+from vendetuarte.views import saludar_con_html
+from galeria.views import crear_cuadro
+
+# Son las URLS generales del proyecto
+urlpatterns =[
+
     path('admin/', admin.site.urls),
-    path('galeria/', include('galeria.urls'))
+    path('galeria/', include('galeria.urls')),
+     
+    path("", saludar_con_html, name="inicio"),
 ]
+
